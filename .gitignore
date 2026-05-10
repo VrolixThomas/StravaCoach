@@ -19,15 +19,16 @@ strava/
 strava/analysis/
 dashboard.html
 
-# Bun / Next.js (will be added in migration)
+# Bun / Next.js
 node_modules/
 .next/
 .vercel/
 .env.local
 .env*.local
-bun.lockb
 out/
 build/
+tsconfig.tsbuildinfo
+*.tsbuildinfo
 
 # DB backups
 coach.db.bak*
