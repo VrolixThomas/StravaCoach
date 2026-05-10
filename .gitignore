@@ -1,0 +1,33 @@
+.venv/
+.pytest_cache/
+__pycache__/
+*.pyc
+
+# coaching state — local only
+coach.db
+coach.db-journal
+coach/.strava_tokens.json
+coach/.env
+
+# generated data
+data/activities.parquet
+data/streams/
+data/parse_errors.log
+strava/
+
+# generated dashboards
+strava/analysis/
+dashboard.html
+
+# Bun / Next.js (will be added in migration)
+node_modules/
+.next/
+.vercel/
+.env.local
+.env*.local
+bun.lockb
+out/
+build/
+
+# DB backups
+coach.db.bak*

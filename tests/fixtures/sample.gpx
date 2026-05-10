@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx creator="StravaGPX" version="1.1" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+ <metadata>
+  <time>2019-07-15T18:44:01Z</time>
+ </metadata>
+ <trk>
+  <name>Beentjes los gooien met broerke</name>
+  <type>running</type>
+  <trkseg>
+   <trkpt lat="51.0083090" lon="5.5961770">
+    <ele>89.5</ele>
+    <time>2019-07-15T18:44:01Z</time>
+   </trkpt>
+   <trkpt lat="51.0082300" lon="5.5960730">
+    <ele>87.7</ele>
+    <time>2019-07-15T18:44:07Z</time>
+   </trkpt>
+  </trkseg>
+ </trk>
+</gpx>
