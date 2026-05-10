@@ -10,6 +10,7 @@
  */
 import {
   pgTable,
+  bigint,
   bigserial,
   text,
   doublePrecision,
@@ -28,7 +29,7 @@ import {
 export const activities = pgTable(
   "activities",
   {
-    id: integer("id").primaryKey(), // Strava activity ID, NOT serial
+    id: bigint("id", { mode: "number" }).primaryKey(), // Strava activity ID, NOT serial
     userId: uuid("user_id"),
     startDt: timestamp("start_dt", { withTimezone: true }).notNull(),
     type: text("type"),
@@ -101,7 +102,7 @@ export const planSessions = pgTable(
     targetDistanceKm: doublePrecision("target_distance_km"),
     targetDurationS: integer("target_duration_s"),
     targetPaceMinKm: doublePrecision("target_pace_min_km"),
-    matchedActivityId: integer("matched_activity_id").references(() => activities.id),
+    matchedActivityId: bigint("matched_activity_id", { mode: "number" }).references(() => activities.id),
     status: text("status").default("planned"), // planned|completed|skipped|modified
     completionNote: text("completion_note"),
   },
@@ -148,7 +149,7 @@ export const proposedAdjustments = pgTable(
     proposedAt: timestamp("proposed_at", { withTimezone: true }).notNull().defaultNow(),
     op: text("op").notNull(), // shift|replace|cancel|scale_week|add
     targetDate: date("target_date"),
-    targetSessionId: integer("target_session_id"),
+    targetSessionId: bigint("target_session_id", { mode: "number" }),
     payloadJson: jsonb("payload_json").notNull(),
     reason: text("reason").notNull(),
     status: text("status").default("pending"), // pending|applied|rejected
